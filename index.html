@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CyberShield – Phishing Detection &amp; Security Awareness</title>
+<style>
+:root{--bg:#eef2f7;--card:#fff;--ink:#33425b;--head:#0b2545;--mut:#667;--nav:#0b2545;--acc:#1b6ca8;--bd:#b9c4d3;--red:#c0392b;--redbg:#fdecea;--amb:#b07d00;--ambbg:#fff6dd;--grn:#2e8b57;--grnbg:#e8f6ee;--tint:#eef4fb;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1523;--card:#16233a;--ink:#d3dcec;--head:#e8f0fc;--mut:#9aa8bf;--nav:#071427;--acc:#4aa3e0;--bd:#3a4b66;--redbg:#3a1d1d;--ambbg:#3a3015;--grnbg:#14301f;--tint:#1a2b47;--amb:#e0b040}}
+:root[data-theme="dark"]{--bg:#0d1523;--card:#16233a;--ink:#d3dcec;--head:#e8f0fc;--mut:#9aa8bf;--nav:#071427;--acc:#4aa3e0;--bd:#3a4b66;--redbg:#3a1d1d;--ambbg:#3a3015;--grnbg:#14301f;--tint:#1a2b47;--amb:#e0b040}
+*{box-sizing:border-box;margin:0;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+html,body{min-height:100%}body{background:var(--bg);color:var(--ink)}
+nav{background:var(--nav);display:flex;flex-wrap:wrap;align-items:center;gap:4px 18px;padding:12px 24px;position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+.logo{font-weight:700;font-size:20px;color:#5ce1e6;margin-right:18px}
+nav button{background:none;border:0;border-bottom:3px solid transparent;color:#dbe6f5;font-size:14px;padding:6px 2px;cursor:pointer}
+nav button.on{border-color:#5ce1e6;color:#fff}nav .ex{margin-left:auto;color:#ff9b9b}
+main{max-width:1050px;margin:0 auto;padding:26px 22px 50px}
+h1{color:var(--head);font-size:28px;margin-bottom:10px}h2{color:var(--head);font-size:18px;margin:14px 0 6px}
+p,li{line-height:1.55;font-size:15px}ul{margin-left:22px}
+.view{display:none}.view.on{display:block}
+.card{background:var(--card);border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.hero{background:linear-gradient(120deg,#0b2545,#1b6ca8);color:#fff;border-radius:14px;padding:30px 34px;margin-bottom:22px}
+.hero h1{color:#fff;font-size:32px}.hero p{color:#dbe6f5}
+.mc{text-align:center;cursor:pointer;border:0;color:var(--ink);font-size:inherit;transition:transform .15s}.mc:hover{transform:translateY(-3px)}
+.mc .i{font-size:36px}.mc b{display:block;color:var(--head);font-size:17px;margin:8px 0 4px}
+.btn{background:var(--acc);color:#fff;border:0;border-radius:8px;padding:10px 20px;font-size:14px;font-weight:700;cursor:pointer;margin:14px 8px 0 0}
+.btn.g{background:#6b7a90}.btn.r{background:var(--red)}
+label{display:block;font-size:13px;font-weight:700;color:var(--head);margin:12px 0 5px}
+input,textarea,select{width:100%;padding:10px;border:1px solid var(--bd);border-radius:8px;font-size:14px;background:var(--card);color:var(--ink)}
+.box{border-left:6px solid;padding:12px 16px;border-radius:8px;margin:10px 0}
+.box.red{border-color:var(--red);background:var(--redbg)}.box.amb{border-color:var(--amb);background:var(--ambbg)}.box.grn{border-color:var(--grn);background:var(--grnbg)}
+.meter{height:12px;border-radius:6px;background:var(--bd);overflow:hidden;margin:8px 0}.meter div{height:100%;width:0;transition:width .4s}
+.err{color:var(--red);font-size:13px;margin-top:4px;min-height:16px}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{border:1px solid var(--bd);padding:7px 10px;text-align:left}th{background:var(--tint)}
+.mut{color:var(--mut);font-size:12px}svg text{fill:var(--ink)}
+</style></head><body>
+<nav aria-label="Main menu"><span class="logo">&#128737; CyberShield</span>
+<button data-v="home" class="on">Home</button><button data-v="obj">Project Objective</button><button data-v="bd">System Block Diagram</button><button data-v="pd">Prototype Design</button><button data-v="exit" class="ex">Exit</button></nav>
+<main>
+<section id="v-home" class="view on">
+<div class="hero"><h1>CyberShield</h1><p>A phishing-detection and digital-security awareness platform that helps everyday users recognise threats, secure their accounts, and report incidents.</p></div>
+<div class="grid">
+<button class="card mc" data-v="obj"><span class="i">&#127919;</span><b>Project Objective</b>Why CyberShield exists and what it aims to achieve.</button>
+<button class="card mc" data-v="bd"><span class="i">&#128200;</span><b>System Block Diagram</b>How the system components connect and interact.</button>
+<button class="card mc" data-v="pd"><span class="i">&#128187;</span><b>Prototype Design</b>Try the three working modules.</button>
+<button class="card mc" data-v="exit"><span class="i">&#128682;</span><b>Exit</b>Close the application safely.</button></div>
+<div class="card" style="margin-top:18px"><b>Tip of the moment:</b> <span id="tip"></span></div>
+</section>
+
+<section id="v-obj" class="view"><h1>Project Objective</h1><div class="card">
+<h2>Primary goal</h2><p>To reduce the number of people who fall victim to phishing and weak-authentication attacks by giving them a simple web tool that analyses suspicious messages, advises on stronger credentials, and lets them report threats.</p>
+<h2>Specific aims</h2><ul><li>Raise awareness of common cyber threats and how to spot them.</li><li>Give instant, understandable risk feedback on suspicious links and messages.</li><li>Encourage secure authentication habits, including multi-factor authentication.</li><li>Offer a simple channel for reporting incidents.</li></ul>
+<h2>Global relevance</h2><p>Cyber attacks cross borders and affect individuals, organisations and infrastructure worldwide. The project supports SDG 4 (Quality Education) and SDG 8 (Decent Work and Economic Growth).</p></div>
+<button class="btn g" data-v="home">&larr; Back to Main Menu</button></section>
+
+<section id="v-bd" class="view"><h1>System Block Diagram</h1>
+<div class="card"><svg viewBox="0 0 900 300" width="100%" role="img" aria-label="Block diagram: User, Presentation Layer, Application Logic Layer, Data and Services Layer" font-size="14" text-anchor="middle">
+<defs><marker id="ar" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0L9,4.5L0,9z" fill="#1b6ca8"/></marker></defs>
+<g stroke="#1b6ca8" stroke-width="2" fill="var(--tint)"><rect x="10" y="100" width="130" height="90" rx="10" fill="#0b2545"/><rect x="190" y="20" width="200" height="260" rx="12" stroke-dasharray="6 4"/><rect x="440" y="20" width="200" height="260" rx="12" stroke-dasharray="6 4"/><rect x="690" y="20" width="200" height="260" rx="12" stroke-dasharray="6 4"/></g>
+<text x="75" y="142" fill="#fff" style="fill:#fff;font-weight:700">User</text><text x="75" y="162" style="fill:#dbe6f5" font-size="12">Web browser</text>
+<g font-weight="700"><text x="290" y="50">Presentation Layer</text><text x="540" y="50">Application Logic Layer</text><text x="790" y="50">Data &amp; Services Layer</text></g>
+<g font-size="13"><text x="290" y="100">Main Menu</text><text x="290" y="135">Objective page</text><text x="290" y="170">Block Diagram page</text><text x="290" y="205">Prototype Design page</text><text x="290" y="240">Exit confirmation</text>
+<text x="540" y="100">Phishing Analyzer</text><text x="540" y="140">Password &amp; Auth Advisor</text><text x="540" y="180">Threat Report Handler</text><text x="540" y="220">Awareness &amp; Tips</text>
+<text x="790" y="100">Threat Indicator Rules</text><text x="790" y="140">Incident Reports Store</text><text x="790" y="180">Awareness Content</text><text x="790" y="220">Threat Intel API (future)</text><text x="790" y="260">Security Administrator</text></g>
+<g stroke="#1b6ca8" stroke-width="2.2" marker-end="url(#ar)"><path d="M140 145H190"/><path d="M390 145H440"/><path d="M640 145H690"/></g></svg></div>
+<div class="card" style="margin-top:16px"><h2>Explanation</h2><p>The user works in a web browser. The <b>presentation layer</b> shows the menu and pages. The <b>application logic layer</b> processes links, passwords and reports. The <b>data and services layer</b> holds the indicator rules, submitted reports and awareness content, plus a future external threat-intelligence service. Results return to the user as scores, messages and recommendations.</p></div>
+<button class="btn g" data-v="home">&larr; Back to Main Menu</button></section>
+
+<section id="v-pd" class="view"><h1>Prototype Design</h1>
+<p style="margin-bottom:16px">CyberShield has three working modules. Select one to try it.</p>
+<div class="grid">
+<button class="card mc" data-v="pc"><span class="i">&#127907;</span><b>Phishing Checker</b>Paste a link or message and get a risk score, red flags and advice.</button>
+<button class="card mc" data-v="pw"><span class="i">&#128273;</span><b>Password &amp; Authentication Advisor</b>Test password strength and learn about passphrases and MFA.</button>
+<button class="card mc" data-v="tr"><span class="i">&#128226;</span><b>Threat Report</b>Report a suspected threat and get a reference number.</button></div>
+<button class="btn g" data-v="home">&larr; Back to Main Menu</button></section>
+
+<section id="v-pc" class="view"><h1>Phishing Checker</h1>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+<div class="card"><label for="pin">Paste a link or message</label><textarea id="pin" rows="6" placeholder="e.g. Your account is suspended. Verify now: http://..."></textarea><div class="err" id="perr"></div>
+<button class="btn" id="pgo">Analyze</button><button class="btn g" id="pclr">Clear</button>
+<p class="mut" style="margin-top:12px">Examples: <a href="#" id="ex1">phishing sample</a> &middot; <a href="#" id="ex2">safe sample</a></p></div>
+<div class="card" id="pres"><h2>Analysis Result</h2><p class="mut">Results will appear here after you press Analyze.</p></div></div>
+<button class="btn g" data-v="pd">&larr; Back to Prototype Design</button></section>
+
+<section id="v-pw" class="view"><h1>Password &amp; Authentication Advisor</h1>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+<div class="card"><label for="pwi">Enter a password to test</label><input id="pwi" type="text" autocomplete="off" placeholder="Type a password">
+<p class="mut" style="margin-top:6px">Checked in your browser only. Nothing is stored or sent.</p>
+<button class="btn" id="pwgo">Check strength</button><button class="btn g" id="pwgen">Suggest a passphrase</button><div id="pwsug" style="margin-top:12px"></div></div>
+<div class="card" id="pwres"><h2>Strength</h2><p class="mut">Enter a password and press Check strength.</p></div></div>
+<button class="btn g" data-v="pd">&larr; Back to Prototype Design</button></section>
+
+<section id="v-tr" class="view"><h1>Threat Report</h1>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+<div class="card"><label for="tt">Threat type</label><select id="tt"><option value="">-- Select --</option><option>Phishing email</option><option>Fake website</option><option>Scam call / SMS</option><option>Account compromise</option></select>
+<label for="tl">Suspicious link or sender</label><input id="tl"><label for="td">What happened?</label><textarea id="td" rows="4"></textarea>
+<div class="err" id="terr"></div><button class="btn r" id="tgo">Submit report</button><button class="btn g" id="tclr">Cancel</button></div>
+<div class="card" id="tres"><h2>System response</h2><p class="mut">Your confirmation will appear here after you submit.</p></div></div>
+<div class="card" style="margin-top:18px"><h2>Reports submitted this session</h2><div id="tlist"><p class="mut">None yet.</p></div></div>
+<button class="btn g" data-v="pd">&larr; Back to Prototype Design</button></section>
+
+<section id="v-exit" class="view"><div class="card" style="max-width:520px;margin:50px auto;text-align:center;padding:34px">
+<div style="font-size:40px">&#128682;</div><h1 style="font-size:24px">Exit CyberShield?</h1><p style="margin:8px 0 6px">Your session will end and no personal data will be kept. Are you sure?</p>
+<button class="btn r" id="yes">Yes, exit</button><button class="btn g" id="stay">Stay</button></div></section>
+
+<section id="v-bye" class="view"><div class="card" style="max-width:520px;margin:50px auto;text-align:center;padding:34px">
+<div style="font-size:40px">&#128075;</div><h1 style="font-size:24px">Session ended</h1><p>Thank you for using CyberShield. You can close this tab. Stay safe online!</p>
+<button class="btn" id="restart">Start a new session</button></div></section>
+</main>
+<script>
+const $=id=>document.getElementById(id);let prev="home";
+function go(v){document.querySelectorAll(".view").forEach(s=>s.classList.toggle("on",s.id==="v-"+v));
+ const map={pc:"pd",pw:"pd",tr:"pd"};document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on",b.dataset.v===(map[v]||v)));
+ document.querySelector("nav").style.display=v==="bye"?"none":"flex";if(v!=="exit")prev=v;window.scrollTo(0,0)}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-v]");if(b)go(b.dataset.v)});
+$("stay").onclick=()=>go(prev==="exit"?"home":prev);$("yes").onclick=()=>go("bye");$("restart").onclick=()=>{reset();go("home")};
+const tips=["Hover over a link to see where it really goes before you click.","Never share one-time codes, even with someone claiming to be your bank.","A long passphrase of random words is stronger than a short complex password.","Turn on multi-factor authentication for email and banking.","Urgent threats and deadlines are a classic phishing trick. Slow down and verify."];
+$("tip").textContent=tips[Math.floor(Math.random()*tips.length)];
+const esc=s=>s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function box(cls,html){return `<div class="box ${cls}">${html}</div>`}
+/* Phishing analyzer */
+function analyze(t){const f=[];let s=0;const l=t.toLowerCase();
+ const add=(n,m)=>{s+=n;f.push(m)};
+ const urgent=["urgent","immediately","suspended","verify now","act now","within 24","final notice","locked","expires","confirm your account"];
+ const u=urgent.filter(w=>l.includes(w));if(u.length)add(Math.min(30,15+u.length*5),`Urgent or threatening language ("${esc(u[0])}")`);
+ const sens=["password","otp","pin ","card number","cvv","social security","login"];if(sens.some(w=>l.includes(w)))add(15,"Asks for sensitive information or a login");
+ const urls=t.match(/(https?:\/\/[^\s]+|www\.[^\s]+)/gi)||[];
+ urls.forEach(u=>{let h="";try{h=new URL(u.startsWith("http")?u:"http://"+u).hostname.toLowerCase()}catch(e){return}
+  if(u.toLowerCase().startsWith("http://"))add(12,"Unencrypted link (http, not https)");
+  if(/^\d+\.\d+\.\d+\.\d+$/.test(h))add(25,"Link uses a raw IP address instead of a domain name");
+  if(/\.(xyz|top|click|tk|gq|work|zip|cf|ml)$/.test(h))add(18,`Suspicious top-level domain (.${h.split(".").pop()})`);
+  if(/(bit\.ly|tinyurl|t\.co|goo\.gl|cutt\.ly)/.test(h))add(12,"Shortened link hides the real destination");
+  if(u.includes("@"))add(15,"Link contains an @ symbol, which can disguise the real address");
+  if((h.match(/-/g)||[]).length>=2||h.split(".").length>=4)add(12,"Domain has many hyphens or subdomains");
+  const brands=["paypal","apple","microsoft","amazon","bank","netflix","google","dhl","fedex","kfh","nbk"];
+  const b=brands.find(x=>h.includes(x));if(b&&!new RegExp("(^|\\.)"+b+"\\.(com|net|org|com\\.kw)$").test(h))add(20,`Domain imitates a known brand ("${b}") but is not its official site`);});
+ if(/(dear (customer|user|client)|valued customer)/.test(l))add(8,"Generic greeting instead of your name");
+ if(/(you (have )?won|prize|gift card|lottery|free)/.test(l))add(15,"Too-good-to-be-true offer");
+ return{score:Math.min(100,s),flags:f,hasUrl:urls.length>0}}
+function runPhish(){const t=$("pin").value.trim();$("perr").textContent="";
+ if(t.length<5){$("perr").textContent="Please paste a link or message (at least 5 characters).";return}
+ const r=analyze(t);const lv=r.score>=55?["red","HIGH RISK","#c0392b","Do not click or reply. Report it using the Threat Report page."]:r.score>=25?["amb","MEDIUM RISK","#b07d00","Be careful. Verify the sender through an official channel before acting."]:["grn","LOW RISK","#2e8b57","No strong warning signs found, but this does not prove it is safe. Stay alert."];
+ $("pres").innerHTML=`<h2>Analysis Result</h2>${box(lv[0],`<b style="font-size:18px">${lv[1]} &mdash; ${r.score} / 100</b>`)}<div class="meter"><div style="width:${r.score}%;background:${lv[2]}"></div></div>
+ <p><b>Red flags found</b></p>${r.flags.length?"<ul>"+[...new Set(r.flags)].map(x=>`<li>${x}</li>`).join("")+"</ul>":"<p class='mut'>None detected.</p>"}
+ ${box(lv[0],`<b>Recommendation:</b> ${lv[3]}`)}${r.score>=25?'<button class="btn r" id="rep">Report this threat</button>':""}`;
+ const rb=$("rep");if(rb)rb.onclick=()=>{$("tl").value=(t.match(/(https?:\/\/[^\s]+|www\.[^\s]+)/i)||[t.slice(0,80)])[0];$("td").value="Flagged by the Phishing Checker ("+r.score+"/100): "+t.slice(0,150);$("tt").value=r.hasUrl?"Phishing email":"Scam call / SMS";go("tr")}}
+$("pgo").onclick=runPhish;
+$("pclr").onclick=()=>{$("pin").value="";$("perr").textContent="";$("pres").innerHTML='<h2>Analysis Result</h2><p class="mut">Results will appear here after you press Analyze.</p>'};
+$("ex1").onclick=e=>{e.preventDefault();$("pin").value="Dear customer, your bank account is suspended. Verify now: http://secure-bank-login.verify-account.xyz/login";runPhish()};
+$("ex2").onclick=e=>{e.preventDefault();$("pin").value="Hi Sara, here are the notes from today's class: https://www.example.com/notes. See you Sunday!";runPhish()};
+/* Password advisor */
+const common=["password","123456","qwerty","letmein","welcome","admin","iloveyou","summer","winter","football","abc123","monkey","dragon"];
+function checkPw(){const p=$("pwi").value;if(!p){$("pwres").innerHTML='<h2>Strength</h2>'+box("amb","Please enter a password first.");return}
+ const c=[];let s=0;const l=p.toLowerCase();
+ const t=(ok,y,n,pts)=>{c.push((ok?"&#10003; ":"&#10007; ")+(ok?y:n));if(ok)s+=pts};
+ t(p.length>=14,"14 or more characters","Under 14 characters (longer is stronger)",30);if(p.length>=10&&p.length<14)s+=15;
+ t(/[a-z]/.test(p)&&/[A-Z]/.test(p),"Upper and lower case letters","Mix upper and lower case letters",15);
+ t(/\d/.test(p),"Contains a number","Add a number",10);t(/[^A-Za-z0-9]/.test(p),"Contains a symbol","Add a symbol",15);
+ const cm=common.some(w=>l.includes(w)),yr=/(19|20)\d\d/.test(p),rp=/(.)\1{2,}/.test(p)||/(abc|123|qwe)/i.test(p);
+ t(!cm,"No common password words","Contains a very common word",15);t(!yr&&!rp,"No obvious year, repeat or sequence","Contains a year, repeated characters or a sequence",15);
+ s=Math.max(0,Math.min(100,s-(cm?25:0)));
+ const lv=s>=75?["grn","Strong","#2e8b57"]:s>=45?["amb","Medium","#b07d00"]:["red","Weak","#c0392b"];
+ $("pwres").innerHTML=`<h2>Strength: ${lv[1]} (${s}/100)</h2><div class="meter"><div style="width:${s}%;background:${lv[2]}"></div></div><ul style="list-style:none;margin:0">${c.map(x=>`<li>${x}</li>`).join("")}</ul>
+ ${box(lv[0]==="red"?"red":"grn","<b>Tip:</b> Use a passphrase of four or more random words, never reuse passwords, and turn on multi-factor authentication (MFA).")}`}
+$("pwgo").onclick=checkPw;$("pwi").addEventListener("keydown",e=>{if(e.key==="Enter")checkPw()});
+const words=["river","cloud","orange","tiger","planet","maple","violet","anchor","falcon","meadow","copper","lantern","puzzle","harbor","jungle","pepper","comet","velvet","sunset","marble"];
+$("pwgen").onclick=()=>{const a=new Uint32Array(4);crypto.getRandomValues(a);const ph=[...a].map(x=>words[x%words.length]).join("-");$("pwsug").innerHTML=box("grn",`Example passphrase idea: <b>${ph}</b><br><span class="mut">Make your own. Do not reuse this one.</span>`)};
+/* Threat report */
+let reports=[];
+function reset(){reports=[];["pin","pwi","tl","td"].forEach(i=>$(i).value="");$("tt").value="";$("pclr").onclick();$("pwres").innerHTML='<h2>Strength</h2><p class="mut">Enter a password and press Check strength.</p>';$("pwsug").innerHTML="";$("tres").innerHTML='<h2>System response</h2><p class="mut">Your confirmation will appear here after you submit.</p>';$("tlist").innerHTML='<p class="mut">None yet.</p>'}
+$("tgo").onclick=()=>{const ty=$("tt").value,li=$("tl").value.trim(),d=$("td").value.trim();$("terr").textContent="";
+ if(!ty){$("terr").textContent="Please select a threat type.";return}
+ if(li.length<3){$("terr").textContent="Please enter the suspicious link or sender.";return}
+ if(d.length<10){$("terr").textContent="Please describe what happened (at least 10 characters).";return}
+ const ref="CS-2026-"+String(400+reports.length+1+Math.floor(Math.random()*90)).padStart(5,"0");
+ reports.push({ref,ty,li,time:new Date().toLocaleTimeString()});
+ $("tres").innerHTML=`<h2>System response</h2>${box("grn",`<b>Report submitted successfully.</b><br>Reference number: <b>${ref}</b>`)}<p><b>Recommended next steps</b></p><ul><li>Do not click the link or reply.</li><li>Change your password if you entered it anywhere.</li><li>Contact the organisation through its official number or website.</li></ul>`;
+ $("tlist").innerHTML="<table><tr><th>Reference</th><th>Type</th><th>Link / sender</th><th>Time</th></tr>"+reports.map(r=>`<tr><td>${r.ref}</td><td>${esc(r.ty)}</td><td>${esc(r.li)}</td><td>${r.time}</td></tr>`).join("")+"</table>";
+ $("tt").value="";$("tl").value="";$("td").value=""};
+$("tclr").onclick=()=>{["tl","td"].forEach(i=>$(i).value="");$("tt").value="";$("terr").textContent=""};
+</script></body></html>
